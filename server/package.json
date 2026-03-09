@@ -1,0 +1,32 @@
+{
+  "name": "verifai-server",
+  "version": "1.0.0",
+  "description": "VerifAI Attendance System - Backend API",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "create-admin": "node scripts/createAdmin.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "attendance",
+    "face-recognition",
+    "ai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^7.0.0",
+    "mongoose": "^8.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
