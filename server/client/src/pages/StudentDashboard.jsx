@@ -8,7 +8,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { toast } from "sonner";
 import api from '../services/api';
-import DashboardNav from '../components/DashboardNav';
 import { GraduationCap, Calendar, CheckCircle, XCircle, TrendingUp, BookOpen } from "lucide-react";
 
 const StatCard = ({ label, value, icon: Icon, colorClass, iconClass, iconColor }) => (
