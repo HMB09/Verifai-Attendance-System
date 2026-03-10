@@ -14,7 +14,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
 import * as faceapi from 'face-api.js';
 import api from '../services/api';
-import DashboardNav from '../components/DashboardNav';
 import { Users, BookOpen, UserPlus, GraduationCap, Settings, Activity, Loader2, X, Trash2, Camera } from "lucide-react";
 
 const StatCard = ({ label, value, icon: Icon, colorClass, iconClass, iconColor }) => (
