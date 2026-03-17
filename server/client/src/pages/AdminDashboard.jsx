@@ -431,7 +431,7 @@ const AdminDashboard = () => {
                     </TableHeader>
                     <TableBody>
                       {courses.map(c=>{
-                        const teacher=users.find(u=>u._id===c.teacherId);
+                        const teacher = users.find(u => u._id?.toString() === c.teacherId?.toString());
                         return (
                           <TableRow key={c._id}>
                             <TableCell><span className="font-bold" style={{color:'#a78bfa'}}>{c.code}</span></TableCell>
